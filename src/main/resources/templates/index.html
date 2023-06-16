@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" th:href="@{/Index.css}" />
+    <link rel="script" th:href="@{/Index.js}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+
+</head>
+<body>
+
+<form   class="form-control" th:action="@{/ViewEnrolment/Student/Table}"
+ th:object="${UserForm}" method="post">
+<!--    id="loginForm"onsubmit="return validateForm()"
+method="post"-->
+
+    <div class="contact-container">
+        <div class="right">
+            <h1 class="title">Sign Into Course</h1>
+            <select  title="CourseId is selected" id="courseId" required
+                     class="form-control">
+<!--                th:field="*{id}"-->
+                <option disabled selected>Please Select Student Course Id</option>
+                <option>MT121</option>
+                <option>CS232</option>
+                <option>CS343</option>
+                <option>IT454</option>
+            </select>
+            <div class="form-container">
+                <div class="username">
+<!--                    <img class="icon email-icon" src="icons/email.svg" alt="">-->
+                    <input   type="text" id="username" class="user-input" placeholder="Enter Username" required
+                    th:field="*{Name}">
+                </div>
+                <div class="Email">
+<!--                    <img class="icon email-icon" src="icons/email.svg" alt="">-->
+                    <input   type="email" id="email" class="user-input" placeholder="requiredemail@gmail.com" required
+                           th:field="*{Email}">
+                </div>
+                <div class="password">
+<!--                    <img class="icon password-icon" src="icons/password lock.svg" alt="">-->
+                    <input   type="password" id="password" class="pass-input" placeholder="Enter Enrollment Key" required
+                           th:field="*{Enrolment_key}">
+                </div>
+                <div class="keepme">
+                    <input  type="checkbox" id="keepMeEnrolled">
+                    <label for="keepMeEnrolled">Keep Me Enrolled</label>
+                </div>
+
+                <button  class="btn btn-primary" type="submit">Enter The Course</button>
+
+            </div>
+        </div>
+    </div>
+</form>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

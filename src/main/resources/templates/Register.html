@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<title>Welcome</title>
+
+<link rel="stylesheet" th:href="@{/css/styles.css}" />
+<link rel="stylesheet" th:href="@{/registration.js}" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<header>
+    <div class="header">
+        <!-- <h2>Scroll Indicator</h2> -->
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+    </div>
+    <!-- <button title="button" class="nav-toggle">
+        <span class="hamburger"></span>
+    </button> -->
+    <div class="smalllogo">
+        <a href="#welcome-section" class="logolink">
+            <h2>coding sumit</h2>
+        </a>
+    </div>
+    <!--  class="nav" Is a navbar for menues-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#index.html">
+            <sup class="welcome">Welcome</sup>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/https:site/Course/Student/Start">Join Course</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tryThis.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills-section">Books</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects-section">More...</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacts-section">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+</header>
+
+<section class="section one" id="home-section">
+
+</section>
+
+<section class="section two" id="about-section">
+    <!-- <a href="tryThis.html">click</a>here -->
+</section>
+
+<section class="section three" id="skills-section">
+    <p class="blink" id="knowledge">DO YOU WANT TO GET MORE KNOWLEDGE?</p>
+</section>
+<section class="section four" id="projects-section">
+
+</section>
+<section class="section five" id="contacts-section">
+
+</section>
+
+<script src="script.js"></script>
+
+
+<style>
+* {
+    /* this is for CODING */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  p{
+    font-size:xx-large;
+    text-align: center;
+    font-weight: bolder;
+    margin: auto;
+    color: green;
+  }
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+  .blink {
+    animation: blink 2s linear infinite;
+  }
+  .header {
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	width: 100%;
+	background-color: #f1f1f1;
+  position: fixed;
+  }
+
+  /* The progress container (grey background) */
+  .progress-container {
+	width: 100%;
+	height: 8px;
+	background: #ccc;
+  position: fixed;
+  }
+
+  /* The progress bar (scroll indicator) */
+  .progress-bar {
+	height: 8px;
+	background: #04AA6D;
+	width: 0%;
+  }
+  .nav {
+    /* 1rem=16px  osition: fixed=> fixes nav bar position*/
+    height: 5rem;
+    width: 100%;
+    font-weight: 300;
+    position: fixed;
+  }
+
+  .nav__list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -49px;
+    padding-right: 35px;
+    font-size: large;
+  }
+
+  .nav__link {
+    text-decoration: none;
+    position: relative;
+    font-family: "Raleway", sans-serif;
+    padding: 16px 0;
+    margin: 0 12px;
+    font-weight: 700;
+  }
+  .nav__link:hover{
+    background-color:rgb(240, 238, 236);
+    border-radius: 15px;
+  }
+  .welcome{
+    font-size: 15px;
+    color: rgb(196, 193, 51);
+  }
+  /* .nav-toggle {
+    display: none;
+  } */
+
+  .logo {
+    padding: 25px;
+    text-align: center;
+    display: flex;
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+  }
+
+  .smalllogo {
+    display: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: #111;
+  }
+
+  @media (max-width: 50px) {
+    .nav {
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      transform: translateX(100%);
+    }
+
+    .nav__list {
+      list-style: none;
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      justify-content: space-evenly;
+      text-align: center;
+      margin: 0;
+      padding: 135px;
+      background-color: #111;
+      width: 100%;
+    }
+
+    .logo {
+      display: none;
+    }
+    .smalllogo {
+      padding: 4.7vh 8vw;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      color: #111;
+      text-transform: uppercase;
+      font-family: "Raleway", sans-serif;
+      font-weight: 800;
+    }
+
+    .logolink {
+      text-decoration: none;
+      color: #111;
+    }
+
+    /* .nav-toggle {
+      display: block;
+      padding: 2.3em;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      position: absolute;
+      right: 0.5rem;
+      top: 1.1rem;
+      /* left: 29rem; */
+      /* z-index: 1000;
+      outline: none; */
+
+
+    /* .nav__link {
+      margin: 0;
+      color: #fff;
+    } */
+
+
+    /* .nav-open {
+      overflow: hidden;
+    } */
+
+    /* .nav-open .nav {
+      transform: translateX(0);
+      width: 100vw;
+    } */
+
+    /* .nav-open .logo {
+      display: none;
+    } */
+
+    /* .nav-open {
+      transform: rotate(0.625turn);
+      background-color: #fff;
+    } */
+
+    /* .nav-open .hamburger::before {
+      transform: rotate(90deg) translateX(-6px);
+      background-color: #fff;
+    } */
+
+    /* .nav-open .hamburger::after {
+      opacity: 0;
+    } */
+
+    /* .hamburger {
+      display: block;
+      position: relative;
+    } */
+
+    /* .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+      background-color: #111;
+      width: 2em;
+      height: 3px;
+      border-radius: 1em;
+      transition: transform 250ms ease-in-out;
+    } */
+
+    /* .hamburger::before,
+    .hamburger::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+    } */
+
+    /* .hamburger::before {
+      top: 6px;
+    }
+
+    .hamburger::after {
+      bottom: 6px;
+    } */
+
+    /* .nav__item {
+      color: #fff;
+    } */
+
+    /* .nav__link::before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 3px;
+      left: 0;
+      height: 3px;
+      width: 100%;
+      background-color: #fff;
+      transform-origin: right top;
+      transform: scale(0, 1);
+      transition: color 0.1s, transform 0.2s ease-out;
+    }
+
+    .nav__link:active::before {
+      background-color: #fff;
+    }
+
+    .nav__link:hover::before,
+    .nav__link:focus::before {
+      transform-origin: left top;
+      transform: scale(1, 1);
+    } */
+  }
+
+  section {
+    width: 100%;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    min-height: 110vh;
+  }
+
+  .one {
+    background-size:cover;
+    background-image:
+    url('https://images.pexels.com/photos/1329571/pexels-photo-1329571.jpeg?auto=compress&cs=tinysrgb&w=600');
+  }
+
+  .two {
+    background-color: rgb(190, 183, 170);
+    background-size:cover;
+    background-image:
+     url('https://images.pexels.com/photos/4466381/pexels-photo-4466381.jpeg?auto=compress&cs=tinysrgb&w=600');
+  }
+
+  .three {
+    background-size:cover;
+    background-color: rgb(63, 118, 238);
+    background-image:
+     url('https://images.pexels.com/photos/3747502/pexels-photo-3747502.jpeg?auto=compress&cs=tinysrgb&w=600');
+  }
+
+  .four {
+    background-size:cover;
+    background-image:
+    url('https://images.pexels.com/photos/2553425/pexels-photo-2553425.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background-color: rgb(221, 22, 88);
+  }
+
+  .five {
+    background-size:cover;
+    background-image:
+     url('https://images.pexels.com/photos/7034648/pexels-photo-7034648.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background-color: rgb(163, 114, 8);
+  }
+
+    </style>
+
+</body>
+
+</html>

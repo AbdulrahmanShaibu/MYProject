@@ -1,0 +1,144 @@
+   @import url("http://fonts.cdnfonts.com/css/sansation");
+@import url("https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+select:hover{
+  background-color: #eef1f3;
+  border-radius: 20px;
+  margin: auto;
+  border-color: #1cb148;
+  width: 280px;
+  height: 45px;
+  margin: 15px;
+  border-radius: 25px;
+  box-sizing: border-box;
+  text-align: center;
+  overflow: hidden;
+  font-family: "Scheherazade New", serif;
+  cursor:crosshair;
+}
+option{
+  font-weight: 500px;
+  font-size: medium;
+}
+.contact-container {
+  background-image: url('https://images.pexels.com/photos/733852/pexels-photo-733852.jpeg?auto=compress&cs=tinysrgb&w=600');
+  background-size:cover;
+  margin: auto;
+  transition: 4s;
+  margin: auto;
+}
+
+.right {
+  position:relative;
+  width: 360px;
+  height: 580px;
+  background: #ffffff;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.title {
+  font-family: Sansation;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 145px;
+  align-items: center;
+  font-family: "Sansation", sans-serif;
+  color: #5754dd;
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+  margin-top: -40px;
+}
+
+input[type="email"],input[type="text"],
+input[type="password"] {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 20px;
+  color: #85b6ff;
+  padding: 20px 10px 20px 5px;
+  border: 2px solid #568aee;
+  width: 280px;
+  height: 45px;
+  margin: 15px;
+  border-radius: 25px;
+  box-sizing: border-box;
+  text-align: center;
+  overflow: hidden;
+  font-family: "Scheherazade New", serif;
+}
+
+input[type="checkbox"] {
+  vertical-align: middle;
+  margin-right: 3px;
+  margin-bottom: 3px;
+  font-weight: bold;
+  height: 18px;
+  width: 18px;
+
+}
+
+::placeholder {
+  color: #85b6ff;
+  font-size: 18px;
+}
+
+.icon {
+  position: absolute;
+  padding: 24px 32px;
+  height: 75px;
+  width: 90px;
+}
+
+.keepme {
+  margin: 15px;
+  color: #71a1bd;
+  font-family: "Scheherazade New", serif;
+  font-weight: bold;
+  cursor:crosshair;
+}
+
+button {
+  width: 260px;
+  height: 45px;
+  left: 1273px;
+  top: 780px;
+  font-family: "Sansation", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 28px;
+  cursor: pointer;
+  color: #ffffff;
+  border: none;
+  background: rgba(135, 113, 224, 0.89);
+  border-radius: 25px;
+}
+
+.link {
+  text-align: center;
+  display: block;
+  margin: 18px;
+  color: #71a1bd;
+  font-family: "Scheherazade New", serif;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+  <!-- contact-container {
+    background: linear-gradient(138.56deg, #318adc 23.44%, #88183a 89.5%);
+  } -->
+  .right {
+    left: calc(68% - 500px / 2);
+  }

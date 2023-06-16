@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Enrolled Students</title>
+    <link rel="stylesheet" th:href="@{/Enrolled.css}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center" title="View the table here">Recent Enrolled Students</h1>
+
+    <!-- This is my table   class="table table-striped element to give it alternating row background colors for better readability.-->
+    <table class="table table-striped">
+        <thead class="thead-light">
+        <tr>
+            <th>COURSE ID</th>
+            <th>USER NAME</th>
+            <th>EMAIL ADDRESS</th>
+            <th>KEY ENROLLED</th>
+            <th colspan="2">ACTIONS</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <div th:if="${message}" class="alert alert-success text-center">
+            [[${message}]]
+        </div>
+        <div th:if="${Deletemessage}" class="alert alert-success text-center">
+            [[${Deletemessage}]]
+        </div>
+
+        <tr th:each="std:${entities}">
+            <td th:text="${std.id}"></td>
+            <td th:text="${std.Name}"></td>
+            <td th:text="${std.Email}"></td>
+            <td th:text="${std.Enrolment_key}"></td>
+            <td>
+                <a class="btn btn-danger" th:href="@{'/user/delete/' + ${std.id}}">Delete</a>
+            </td>
+            <td>
+                <a class="btn btn-info" th:href="@{'/add/new/student'}">Add</a>
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
