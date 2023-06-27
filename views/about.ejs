@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <style>
+    /* Add some basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+    #team-members {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .team-member {
+      margin: 10px;
+      text-align: center;
+      cursor: pointer;
+    }
+    .team-member img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      transition: transform 0.5s ease-in-out;
+    }
+    .team-member img:hover {
+      transform: scale(1.1);
+    }
+    h2{
+        margin: auto;
+        margin-left: 5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>About Us</h1>
+  <p>Welcome to our student enrollment website!</p>
+  <p> We are dedicated to providing a seamless and efficient platform for students to enroll in their desired courses and educational programs. Our goal is to simplify the enrollment process and make it accessible to students of all backgrounds.</p>
+  <p>Whether you are a high school student looking for college admissions, a college student seeking to explore new academic opportunities, or an adult learner looking to enhance your skills, we have a wide range of programs to meet your needs.</p>
+  <p>Our team consists of experienced professionals who are passionate about education and are committed to supporting students throughout their enrollment journey. We strive to provide a user-friendly interface, comprehensive information about courses and programs, and excellent customer service to ensure a smooth and satisfactory experience for all our users.</p>
+  <p>Explore our website to discover the diverse range of courses and programs available, learn about admission requirements, and access helpful resources to assist you in making informed decisions about your education.</p>
+  <p>Thank you for choosing us for your enrollment needs. We are excited to be part of your educational journey!</p>
+  <p>If you have any questions or need assistance, please don't hesitate to contact our support team. We're here to help!</p>
+
+<a href="/home">
+    <button class="btn btn-primary" style="color: red;">Back</button>
+</a>
+  <h2>Meet Our instructors</h2>
+  <div id="team-members">
+    <div class="team-member" onclick="showMemberDetails('john')">
+      <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=600" alt="John" />
+      <p>John Doe</p>
+    </div>
+    <div class="team-member" onclick="showMemberDetails('jane')">
+      <img src="https://images.pexels.com/photos/5668870/pexels-photo-5668870.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Jane" />
+      <p>Jane Smith</p>
+    </div>
+  </div>
+
+  <div id="member-details">
+    <h3 id="member-name"></h3>
+    <p id="member-description"></p>
+  </div>
+
+
+  <script>
+    function showMemberDetails(member) {
+      const memberNameElement = document.getElementById('member-name');
+      const memberDescriptionElement = document.getElementById('member-description');
+
+      if (member === 'john') {
+        memberNameElement.textContent = 'John Doe';
+        memberDescriptionElement.textContent = 'John is an experienced education professional with a passion for helping students achieve their goals. He specializes in college admissions and career counseling.';
+      } else if (member === 'jane') {
+        memberNameElement.textContent = 'Jane Smith';
+        memberDescriptionElement.textContent = 'Jane is a dedicated instructor who focuses on creating engaging and interactive learning experiences for students. She specializes in online education and curriculum development.';
+      }
+
+      const memberDetailsElement = document.getElementById('member-details');
+      memberDetailsElement.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
