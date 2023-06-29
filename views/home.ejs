@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
 
-    <style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome</title>
+
+  <style>
     /* Reset default margin and padding */
     * {
       margin: 0;
@@ -14,7 +15,7 @@
 
     body {
       font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
+      background-color: rgb(118, 165, 150);
     }
 
     header {
@@ -53,6 +54,11 @@
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       padding: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
     }
 
     .card h3 {
@@ -62,6 +68,7 @@
 
     .card p {
       color: #888;
+      margin-bottom: 10px;
     }
 
     .card img {
@@ -98,12 +105,44 @@
       max-width: 100%;
       max-height: 100%;
     }
-    </style>
+  </style>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
 
+    .section {
+      padding: 5rem 0;
+    }
+
+    .card-img-top {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+    }
+
+    .price {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .lead {
+      font-size: 18px;
+      margin-top: 1rem;
+    }
+
+    .quantity-input {
+      max-width: 3rem;
+    }
+
+    .add-to-cart-btn {
+      margin-top: 1rem;
+    }
+  </style>
 </head>
+
 <body>
-    
-   <header>
+  <header>
     <nav>
       <a href="/home">Home</a>
       <a href="/add">Join us</a>
@@ -112,46 +151,71 @@
     </nav>
   </header>
 
-
   <div class="container">
     <div class="card">
       <img src="https://images.pexels.com/photos/3584967/pexels-photo-3584967.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Image 1">
       <h3>CS1237</h3>
-      <p>Get Started...</p>
+      <p>Principles of Marketing</p>
+      <p>Course Description: This course explores the basic principles and theories of marketing, including market research, consumer behavior, branding, advertising, and sales. Students will learn how to develop effective marketing strategies and analyze market trends.</p>
       <a href="/add">
-      <button>Get Enrolled to this course</button>
+        <button>Get Enrolled to this course</button>
       </a>
     </div>
     <div class="card">
       <img src="https://images.pexels.com/photos/7015062/pexels-photo-7015062.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Image 2">
       <h3>CS2237</h3>
-      <p>Get Started...</p>
-       <a href="/add">
-      <button>Get Enrolled to this course</button>
+      <p>Introduction to Psychology</p>
+      <p>Course Description: This course provides an overview of the field of psychology, including its history, major theories, and research methods. Students will explore various topics such as human development, cognition, social behavior, and psychological disorders.</p>
+      <a href="/add">
+        <button>Get Enrolled to this course</button>
       </a>
     </div>
     <div class="card">
       <img src="https://images.pexels.com/photos/5077393/pexels-photo-5077393.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Image 3">
-      <h3>CS2238 </h3>
-      <p>Get Started...</p>
-       <a href="/add">
-      <button>Get Enrolled to this course</button>
+      <h3>CS2238</h3>
+      <p>Financial Accounting</p>
+      <p>Course Description: This course introduces the principles and practices of financial accounting. Students will learn how to prepare and interpret financial statements, analyze business transactions, and understand the basics of financial reporting.</p>
+      <a href="/add">
+        <button>Get Enrolled to this course</button>
       </a>
     </div>
     <div class="card">
       <img src="https://images.pexels.com/photos/38544/imac-apple-mockup-app-38544.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Image 4">
       <h3>CS2337</h3>
-      <p>Get Started...</p>
-       <a href="/add">
-      <button>Get Enrolled to this course</button>
+      <p>Introduction to Computer Science</p>
+      <p>Course Description: This course provides an introduction to the fundamental concepts of computer science, including programming, algorithms, data structures, and problem-solving. Students will gain hands-on experience in writing code and develop a strong foundation in computer science principles.</p>
+      <a href="/add">
+        <button>Get Enrolled to this course</button>
       </a>
     </div>
   </div>
 
- <div class="full-screen-image">
-    <img src="https://images.pexels.com/photos/927629/pexels-photo-927629.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Full Screen Image">
-  </div>
-  <!-- Rest of your HTML content goes here -->
 
+  <div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 align-items-center">
+      <div class="col-md-6">
+        <img class="card-img-top mb-5 mb-md-0" src="https://images.pexels.com/photos/927629/pexels-photo-927629.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Full Screen Image" alt="..." />
+      </div>
+      <div class="col-md-6">
+        <div class="small mb-1">About Courses</div>
+        <h1 class="display-5 fw-bolder">Description...</h1>
+        <div class="price">
+          <span class="text-decoration-line-through"></span>
+          <span>Get Informed</span>
+        </div>
+        <p class="lead">Principles of Marketing introduces students to the fundamental
+           concepts and practices of marketing, exploring topics such as market research,
+            consumer behavior, advertising, and branding. It equips individuals with the 
+            skills to identify target markets, develop effective marketing strategies, and
+             understand the role of marketing in business success. Introduction to Psychology 
+             delves into the fascinating realm of the human mind and behavior.
+            </p>
+     
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
 </body>
+
 </html>

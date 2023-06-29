@@ -8,27 +8,61 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      background-color: rgb(149, 180, 170);
+    }
+
+    .container {
+      margin-top: 20px;
+      max-width: 400px;
+    }
+
+    .card {
+      padding: 20px;
+      border-radius: 5px;
+      background-color: rgb(118, 165, 150);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    .btn-primary {
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
- 
-<div class="container">
-  <h2><%= title %></h2>
-  <form method="POST" action="/save">
-    <div class="form-group">
-      <label for="name">Name:</label>
-      <input type="text" class="form-control" id="name" name="name" required>
-    </div>
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" name="email" required>
-    </div>
-    <div class="form-group">
-      <label for="phone_no">Phone No.:</label>
-      <input type="text" class="form-control" id="phone_no" name="phone_no" required>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+<div class="card">
+  <div class="container">
+    <h2><%= title %></h2>
+    <form method="POST" action="/save">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone_no">Phone No.:</label>
+        <input type="text" class="form-control" id="phone_no" name="phone_no" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
 </div>
- 
 </body>
 </html>

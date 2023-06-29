@@ -44,10 +44,30 @@ app.get('/',(req, res) => {
         });
     });
 });
+// ...
 
+// Retrieve form data from the database and send as JSON
+app.get('/formData/api/v1', (req, res) => {
+    let sql = "SELECT * FROM users";
+    let query = connection.query(sql, (err, rows) => {
+      if (err) throw err;
+      res.json(rows);
+    });
+  });
+
+  app.get('/admin/api/v1', (req, res) => {
+    let sql = "SELECT * FROM admins";
+    let query = connection.query(sql, (err, rows) => {
+      if (err) throw err;
+      res.json(rows);
+    });
+  });
+  
+  // ...
+  
 app.get('/add', (req, res) => {
     res.render('add_user', {
-        title: 'Add Student'
+        title: 'Add Details'
     });
 });
 
@@ -77,7 +97,7 @@ app.post('/login', (req, res) => {
             res.redirect('/home');
         } else {
             res.render('login', {
-                title: 'Admin Login',
+                title: 'Login as Admin',
                 error: 'Invalid username or password'
             });
         }
